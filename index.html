@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="scripts/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Importando o Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Meu Portfólio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <!-- Ícones das Redes Sociais -->
+                    <!-- COLOQUE AQUI O SEU WATSAPP -->
+                    <li><a href="https://wa.me/SEUNUMEROTELEFONE" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a></li>
+                    <!-- COLOQUE AQUI O SEU INSTAGRAM -->
+                    <li><a href="https://instagram.com/SEUPERFIL" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                    <!-- COLOQUE AQUI O SEU FACEBOOK -->
+                    <li><a href="https://facebook.com/SEUPERFIL" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a></li>
+                    <!-- COLOQUE AQUI O SEU DISCORD -->
+                    <li><a href="https://discord.com/SEUPERFIL" target="_blank" class="social-icon"><i class="fab fa-discord"></i></a></li>
+                    <!-- PEGUE O LINK DO SEU WATSAPP, INSTAGRAM, FACEBOOK E DISCORD E SUBSTITUA PELOS LINKS ENCONTRADOS ACIMA, EM "href='LINK'",
+                    CASO NÃO QUEIRA COLOCAR APENAS COMENTE ESTA PARTE DO CÓDIGO OU APAGUE! -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Olá, eu sou <span class="highlight">@SeuNome</span></h2>
+            <p>Bem-vindo ao meu portfólio. Sou um desenvolvedor web apaixonado por criar sites bonitos e funcionais.</p>
+            <a href="#projects" class="btn">Veja o meu trabalho</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="profile-pic"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor, risus at commodo facilisis, libero magna pharetra erat, in vulputate ipsum odio id urna.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Meus projetos</h2>
+            <div class="grid">
+                <div class="card">
+                    <a href="scripts/projetos/projeto-1.html" style="text-decoration: none; color: #F5F5F5; cursor: pointer;" target="_blank">
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            <h3>Projeto Um</h3>
+                            <p>Descrição do Projeto Um.</p>
+                    </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="scripts/projetos/projeto-2.html" style="text-decoration: none; color: #F5F5F5; cursor: pointer;" target="_blank">
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            <h3>Projeto Dois</h3>
+                            <p>Descrição do Projeto Dois.</p>
+                    </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="scripts/projetos/projeto-3.html" style="text-decoration: none; color: #F5F5F5; cursor: pointer;" target="_blank">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        
+                            <h3>Projeto Três</h3>
+                        
+                        <p>Descrição do Projeto Três.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Entre em contato comigo</h2>
+            <form id="contact-form" onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Seu nome. Todos os direitos reservados.</p>
+    </footer>
+     
+    <!-- Script para EmailJS -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("COLOQUE_AQUI_O_SEU_USER_ID"); // Substitua pelo seu User ID do EmailJS
+    })();
+
+    function sendEmail(event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
+
+        // Captura os dados do formulário
+        const templateParams = {
+            from_name: document.getElementById('name').value,
+            reply_to: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+        };
+
+        // Substitua 'COLOQUE_AQUI_O_SEU_SERVICE_ID' e 'COLOQUE_AQUI_O_SEU_TEMPLATE_ID' pelos IDs apropriados do EmailJS
+        emailjs.send('COLOQUE_AQUI_O_SEU_SERVICE_ID', 'COLOQUE_AQUI_O_SEU_TEMPLATE_ID', templateParams)
+            .then(function(response) {
+                alert('Email enviado com sucesso!', response.status, response.text);
+                document.getElementById('contact-form').reset(); // Reseta o formulário após o envio
+            }, function(error) {
+                alert('Erro ao enviar o email:', error);
+            });
+    }
+    </script>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
