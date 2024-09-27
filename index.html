@@ -10,28 +10,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header style="border-radius: 5px;">
         <div class="container">
             <h1 class="logo">Meu Portfólio</h1>
             <nav>
-                <ul>
+                <ul class="menu">
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#projects">Projetos</a></li>
-                    <!-- Ícones das Redes Sociais -->
-                    <!-- COLOQUE AQUI O SEU WATSAPP -->
-                    <li><a href="https://wa.me/SEUNUMEROTELEFONE" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a></li>
-                    <!-- COLOQUE AQUI O SEU INSTAGRAM -->
-                    <li><a href="https://instagram.com/SEUPERFIL" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a></li>
-                    <!-- COLOQUE AQUI O SEU FACEBOOK -->
-                    <li><a href="https://facebook.com/SEUPERFIL" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a></li>
-                    <!-- COLOQUE AQUI O SEU DISCORD -->
-                    <li><a href="https://discord.com/SEUPERFIL" target="_blank" class="social-icon"><i class="fab fa-discord"></i></a></li>
-                    <!-- PEGUE O LINK DO SEU WATSAPP, INSTAGRAM, FACEBOOK E DISCORD E SUBSTITUA PELOS LINKS ENCONTRADOS ACIMA, EM "href='LINK'",
-                    CASO NÃO QUEIRA COLOCAR APENAS COMENTE ESTA PARTE DO CÓDIGO OU APAGUE! -->
                 </ul>
-            </nav>
-        </div>
-    </header>
+                <!-- Ícones das Redes Sociais -->
+                <div class="social-icons">
+                    <!-- COLOQUE AQUI O SEU WHATSAPP -->
+                    <a href="https://wa.me/SEUNUMEROTELEFONE" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <!-- COLOQUE AQUI O SEU INSTAGRAM -->
+                    <a href="https://instagram.com/SEUPERFIL" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <!-- COLOQUE AQUI O SEU FACEBOOK -->
+                    <a href="https://facebook.com/SEUPERFIL" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <!-- COLOQUE AQUI O SEU DISCORD -->
+                    <a href="https://discord.com/SEUPERFIL" target="_blank" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </header>
 
     <section id="hero">
         <div class="container">
@@ -55,7 +54,7 @@
             <div class="grid">
                 <div class="card">
                     <a href="scripts/projetos/projeto-1.html" style="text-decoration: none; color: #F5F5F5; cursor: pointer;" target="_blank">
-                        <div class="card-image"></div>
+                        <div class="card-image" style="display: block;"></div>
                         <div class="card-content">
                             <h3>Projeto Um</h3>
                             <p>Descrição do Projeto Um.</p>
@@ -107,7 +106,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer style="border-radius: 5px;">
         <p>&copy; 2024 Seu nome. Todos os direitos reservados.</p>
     </footer>
      

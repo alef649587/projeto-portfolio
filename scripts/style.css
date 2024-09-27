@@ -4,6 +4,8 @@ body {
     background-color: #1a1a1d;
     color: #f5f5f5;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -19,6 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -30,6 +33,9 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -64,6 +70,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 20px;
 }
 
 #hero h2 {
@@ -132,6 +139,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -139,6 +147,8 @@ nav ul li a:hover {
     border-radius: 10px;
     overflow: hidden;
     flex: 1;
+    min-width: 300px;
+    margin: 10px 0;
     transition: transform 0.3s ease;
 }
 
@@ -219,4 +229,138 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero {
+        padding: 40px 20px;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas menores */
+}
+
+.logo {
+    color: #f5f5f5;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    margin-left: 15px; /* Espaçamento entre os ícones */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f39c12;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Mantenha os itens do menu em uma linha */
+        flex-wrap: wrap; /* Quebra os itens, se necessário */
+        gap: 15px; /* Espaçamento entre os itens */
+    }
+
+    nav ul li {
+        margin: 0; /* Remover margem extra para evitar quebras */
+    }
+
+    nav ul li a {
+        padding: 5px 10px; /* Adiciona espaçamento aos links do menu */
+        font-size: 0.9rem; /* Reduz um pouco o tamanho da fonte */
+    }
+
+    .social-icon {
+        font-size: 1.2rem; /* Reduz o tamanho dos ícones em telas menores */
+        margin-left: 10px; /* Ajusta o espaçamento entre os ícones */
+    }
 }
